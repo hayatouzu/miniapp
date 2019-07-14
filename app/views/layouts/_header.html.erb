@@ -1,0 +1,15 @@
+    <nav class="blue lighten-2">
+        <div class="navber">
+          <a href="#" class="brand-logo">miniapp</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            
+            <% if user_signed_in? %>
+            <li><%= link_to "new", new_review_path %></li>
+            <li><%= link_to "Sing out", destroy_user_session_path, method: :delete%></li>
+            <% else %>
+            <li><%= link_to "Sing in", new_user_session_path%></li>
+            <li><%= link_to "新規登録", new_user_registration_path%></li>
+          </ul>
+            <% end %>
+        </div>
+      </nav>
